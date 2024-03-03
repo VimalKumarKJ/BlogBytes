@@ -1,0 +1,23 @@
+<section>
+    <div class="container">
+        <h1 class="mb-5 text-center">Blogs Feed</h1>
+        <% if (posts.length === 0){ %>
+            <h4 class="text-center mt-5">Oops! It's empty here</h4>
+            <div class="text-center"><img src="https://i.gifer.com/7VE.gif" alt="John Travolta gif" height="200"></div>
+        <% } %>
+        <div class="row">
+            <% posts.forEach(post => { %>
+                <div class="col-12 col-md-6 col-lg-6 mb-4">
+                    <div class="card box-shadow w-9" style="width: 100%;">
+                        <img class="card-img-top" src="<%= post.Thumbnail %>" alt="<%= post.Title %>" height="300" width="450">
+                        <div class="card-body">
+                            <h5 class="card-title"><%= post.Title %></h5>
+                            <p class="card-text text-justify"><%= post.Content %></p>
+                            <p class="font-weight-bold text-right">~ <%= post.Author %></p>
+                        </div>
+                    </div>
+                </div>
+            <% }) %>
+        </div>
+    </div>
+</section>

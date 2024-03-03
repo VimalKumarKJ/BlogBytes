@@ -1,0 +1,25 @@
+<%- include("partials/header.ejs") %>
+
+<div class="container mt-4">
+    <h1 class="display-3 text-center">Create your blog</h1>
+    <form class="d-flex flex-column" action="/create" method="post">
+        <div class="mb-3 mt-4">
+            <label for="Heading" class="form-label">Title</label>
+            <input type="Title" class="form-control" name="title" placeholder="Title of your blog" required>
+        </div>
+        <div class="mb-3 mt-4">
+            <label for="Thumbnail" class="form-label">Thumbnail</label>
+            <input type="Thumbnail" class="form-control" name="thumbnail" placeholder="Paste your image URL here">
+        </div>
+        <div class="mb-3">
+            <label for="Author" class="form-label">Author</label>
+            <input type="Author" class="form-control" name="author" placeholder="Your name">
+        </div>
+        <div class="mb-4">
+            <label for="Body" class="form-label">Enter you content here (Under 2000 characters)</label>
+            <textarea class="form-control" name="content" rows="3" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+
